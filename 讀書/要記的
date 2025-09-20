@@ -1,0 +1,73 @@
+1. dictionary基本用法
+
+2. 數點到幾位
+    x = 3.1415926
+    # 保留4位小數
+    print(f"{x:.4f}")  # 輸出: 3.1416
+
+    # 補零至3位小數
+    y = 2.5
+    print(f"{y:.3f}")  # 輸出: 2.500
+
+    # 整數也可以這樣格式化
+    z = 7
+    print(f"{z:.2f}")  # 輸出: 7.00
+
+    # 對齊與寬度設定（共10格，靠右，保留2位小數）
+    print(f"{x:10.2f}")  # 輸出:      3.14
+
+    # 加上千位逗號（可搭配小數）
+    big_number = 1234567.8912
+    print(f"{big_number:,.2f}")  # 輸出: 1,234,567.89
+
+3. 字符串連接
+    #如果是整數，例如1001換成0000001001
+    num = 1001
+    print(f"{num:010d}")  # 輸出: 0000001001
+    # 如果是浮點數，例如3.14換成0000003.14
+    float_num = 3.14
+    print(f"{float_num:010.2f}")  # 輸出: 0000003.14
+    #如果是1001要把空格換成1，變成1111111001
+    num = 1001
+    print(f"{num:0>10}")  # 輸出: 1111111001
+    #如果是3.14要把空格換成1，變成1111113.14
+    float_num = 3.14
+    print(f"{float_num:0>10.2f}")  # 輸出: 1111113.14
+    
+
+4. "".join(value_list)
+    " ".join(value_list)
+    ",".join(value_list)
+
+5. s = "  Hello World  "
+    print(s.strip())  # 結果: "Hello World"
+    s = "///Hello World///"
+    print(s.strip("/"))  # 結果: "Hello World"
+    s = "  Hello World  "
+    print(s.lstrip())   # 結果: "Hello World  "
+    print(s.rstrip())   # 結果: "  Hello World"
+
+6. 召喚物件
+    Users={}
+    User_Type=Input_List[1]
+    User=Input_List[2]
+    if User_Type=="U":
+        s=UndergraduateStudent(User)
+    if User_Type=="G":
+        s=GraduateStudent(User)
+    if User_Type=="P":
+        s=Professor(User)
+    Users[User]=s
+
+    User=Input_List[1]
+    s=Users.get(User)  #            
+    s.borrowBook(BookBorrowing)
+
+7. 召喚函式一定要functions(variables)！！！
+    只有functions會出錯
+
+8. 英文
+    被除數：dividend
+    除數：divisor
+    商：quotient
+    餘數：remainder
